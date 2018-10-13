@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import com.example.simpleweather.db.City;
 import com.example.simpleweather.db.County;
 import com.example.simpleweather.db.Province;
-import com.google.gson.JsonArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
