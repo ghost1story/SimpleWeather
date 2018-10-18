@@ -19,12 +19,10 @@ import android.widget.Toast;
 import com.example.simpleweather.db.City;
 import com.example.simpleweather.db.County;
 import com.example.simpleweather.db.Province;
-import com.example.simpleweather.gson.Weather;
 import com.example.simpleweather.util.HttpUtil;
 import com.example.simpleweather.util.Utility;
 
 import org.litepal.LitePal;
-import org.litepal.crud.LitePalSupport;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -85,10 +83,6 @@ public class ChooseFragment extends Fragment {
                     queryCounties();
                 } else if (currentLevel == LEVEL_COUNTY) {
                     String weatherId = countyList.get(position).getWeatherId();
-                    /*Intent intent = new Intent(getActivity(), WeatherActivity.class);
-                    intent.putExtra("weather_id", weatherId);
-                    startActivity(intent);
-                    getActivity().finish();*/
                     if (getActivity() instanceof MainActivity) {
                         Intent intent = new Intent(getActivity(), WeatherActivity.class);
                         intent.putExtra("weather_id", weatherId);
